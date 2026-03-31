@@ -120,12 +120,52 @@ sovereign-agent-lab/
 
 ## Setup — run once
 
-### 1. Get the code
+### 1. Fork and clone the repo
 
+You work in your own fork and not directly in the shared repo. This matters
+for two reasons: your submission lives in your fork, and when the instructor
+pushes updates or fixes to the assignment (which happens), you can pull them
+into your fork without losing your own work.
+
+**Step 1 — Fork on GitHub**
+
+Go to the repo page on GitHub and click **Fork** (top right). Accept all
+defaults. This creates your own copy at
+`github.com/YOUR-USERNAME/sovereign-agent-lab`.
+
+**Step 2 — Clone your fork**
 ```bash
 git clone https://github.com/YOUR-USERNAME/sovereign-agent-lab.git
 cd sovereign-agent-lab
 ```
+
+**Step 3 — Add the upstream remote**
+
+This links your local clone back to the original repo so you can pull
+instructor updates:
+```bash
+git remote add upstream https://github.com/nebius-academy/sovereign-agent-lab.git
+git remote -v
+```
+
+You should see two remotes: `origin` (your fork) and `upstream` (the
+instructor's repo).
+
+#### Pulling an update from the instructor
+
+When the instructor announces an update, run:
+```bash
+git fetch upstream
+git merge upstream/main
+```
+
+This brings in any new scaffold files or fixes without overwriting your own
+work. If there is a conflict (rare — instructor updates touch different files
+than your answers), Git will tell you which files to resolve.
+
+Your answers live in `week1/answers/`, your implementations in
+`sovereign_agent/` and `exercise3_rasa/actions/actions.py`. The instructor
+never pushes changes to those paths, so merges are almost always clean.
 
 ### 2. API key
 
