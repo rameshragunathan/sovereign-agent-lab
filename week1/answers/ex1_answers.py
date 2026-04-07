@@ -10,55 +10,55 @@ Run `python grade.py ex1` to check for obvious issues before submitting.
 # The exact answer the model gave for each condition.
 # Copy-paste from your terminal output (the → "..." part).
 
-PART_A_PLAIN_ANSWER    = "FILL_ME_IN"
-PART_A_XML_ANSWER      = "FILL_ME_IN"
-PART_A_SANDWICH_ANSWER = "FILL_ME_IN"
+PART_A_PLAIN_ANSWER    = "The Haymarket Vaults"
+PART_A_XML_ANSWER      = "The Albanach"
+PART_A_SANDWICH_ANSWER = "The Albanach"
 
 # Was each answer correct? True or False.
 # Correct = contains "Haymarket" or "Albanach" (both satisfy all constraints).
 
-PART_A_PLAIN_CORRECT    = None   # True or False
-PART_A_XML_CORRECT      = None
-PART_A_SANDWICH_CORRECT = None
+PART_A_PLAIN_CORRECT    = True   # True or False
+PART_A_XML_CORRECT      = True
+PART_A_SANDWICH_CORRECT = True
 
 # Explain what you observed. Minimum 30 words.
 
 PART_A_EXPLANATION = """
-FILL ME IN
+Model correctly picked pubs that meets the requirements, irrespective of the formatting presented. Plain picked the Haymarket Vaults, while XML and Sandwich picked The Albanach, this in my opnion is down to the simplicity of the dataset. 
 """
 
 # ── Part B ─────────────────────────────────────────────────────────────────
 
-PART_B_PLAIN_ANSWER    = "FILL_ME_IN"
-PART_B_XML_ANSWER      = "FILL_ME_IN"
-PART_B_SANDWICH_ANSWER = "FILL_ME_IN"
+PART_B_PLAIN_ANSWER    = "The Haymarket Vaults"
+PART_B_XML_ANSWER      = "The Albanach"
+PART_B_SANDWICH_ANSWER = "The Albanach"
 
-PART_B_PLAIN_CORRECT    = None
-PART_B_XML_CORRECT      = None
-PART_B_SANDWICH_CORRECT = None
+PART_B_PLAIN_CORRECT    = True
+PART_B_XML_CORRECT      = True
+PART_B_SANDWICH_CORRECT = True
 
 # Did adding near-miss distractors change any results? True or False.
-PART_B_CHANGED_RESULTS = None
+PART_B_CHANGED_RESULTS = False
 
 # Which distractor was more likely to cause a wrong answer, and why?
 # Minimum 20 words.
 PART_B_HARDEST_DISTRACTOR = """
-FILL ME IN
+Ones where the requirements are similar but with enough subtle changes, such as venue being full, or not having Vegan option. Model that skims will miss this
 """
 
 # ── Part C ─────────────────────────────────────────────────────────────────
 
 # Did the exercise run Part C (small model)?
 # Check outputs/ex1_results.json → "part_c_was_run"
-PART_C_WAS_RUN = None   # True or False
+PART_C_WAS_RUN = True   # True or False
 
-PART_C_PLAIN_ANSWER    = "FILL_ME_IN_OR_N/A"
-PART_C_XML_ANSWER      = "FILL_ME_IN_OR_N/A"
-PART_C_SANDWICH_ANSWER = "FILL_ME_IN_OR_N/A"
+PART_C_PLAIN_ANSWER    = "The Haymarket Vaults"
+PART_C_XML_ANSWER      = "The Haymarket Vaults"
+PART_C_SANDWICH_ANSWER = "The Haymarket Vaults"
 
 # Explain what Part C showed, or why it wasn't needed. Minimum 30 words.
 PART_C_EXPLANATION = """
-FILL ME IN
+Part C was run as A and B were correct. As the answers for all 3 were correct, stress testing with smaller model showed that the dataset was not complex enough to show effect of the smaller 8b model.
 """
 
 # ── Core lesson ────────────────────────────────────────────────────────────
@@ -67,5 +67,6 @@ FILL ME IN
 # "Context formatting matters most when..."
 
 CORE_LESSON = """
-FILL ME IN
+Due to the lack of complex dataset, the results form the formating options or models sizes did not differ. I would expect differences when larger dataset with more distractors to be present, understanding the context at scale with unstructured data is where the formatting matters most.
+
 """
